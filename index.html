@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anderson Alexandre - Gamer Portfolio</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="matrix-canvas"></canvas>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">&lt;NEOKNIF /&gt;</span>
+      <div class="nav-links">
+        <a href="#Sobre" class="active">SOBRE</a>
+        <a href="#Habilidades">SKILLS</a>
+        <a href="#Formacao">QUESTS</a>
+        <a href="#Contato">CONTATO</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="Sobre">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">[ PLAYER 1 READY ]</div>
+          <h1 class="hero-h1 white">Anderson</h1>
+          <h1 class="hero-h1 green">Alexandre</h1>
+          <div class="typewriter-wrap">
+            <span id="typewriter"></span><span class="cursor">_</span>
+          </div>
+          <p class="hero-desc">
+            <strong>36 anos</strong> &middot; Profissional do Setor Público em transição para o mundo Dev.
+            Atualmente elevando o nível (Leveling Up) em <strong>Análise e Desenvolvimento de Sistemas</strong>.
+          </p>
+          <div class="btn-row">
+            <a href="#Contato" class="btn-gamer btn-primary-gamer">Iniciar Contato</a>
+            <a href="#Habilidades" class="btn-gamer btn-outline-gamer">Ver Status / Skills</a>
+          </div>
+        </div>
+
+        <div class="avatar-card">
+          <div class="avatar-circle">AA</div>
+          <div>
+            <div class="avatar-name">Anderson Alexandre</div>
+            <div class="avatar-role">CLASS: DEV IN TRAINING</div>
+          </div>
+          <div class="avatar-info">
+            <div class="avatar-row"><span class="lbl">AGE</span><span class="val">36</span></div>
+            <div class="avatar-row"><span class="lbl">GUILD</span><span class="val">ADS</span></div>
+            <div class="avatar-row"><span class="lbl">LOCATION</span><span class="val">Santa Isabel, SP</span></div>
+            <div class="avatar-row"><span class="lbl">SERVER</span><span class="val">Public Sector</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-header">
+          <span class="showcase-title">&gt; FEATURED MEDIA / PROJECT SHOWCASE</span>
+          <span class="showcase-badge">LIVE DEMO</span>
+        </div>
+        <div class="media-box">
+          <video autoplay loop muted playsinline>
+            <source src="https://i.imgur.com/eGB5sIe.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="Habilidades">
+    <div class="container">
+      <div class="section-label">
+        <span class="sl-num">02</span>
+        <div class="sl-line"></div>
+        <span class="sl-text">Skill Tree</span>
+        <div class="sl-line flex"></div>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <section id="Formacao">
+    <div class="container">
+      <div class="section-label">
+        <span class="sl-num">03</span>
+        <div class="sl-line"></div>
+        <span class="sl-text">Main Quests / Formação</span>
+        <div class="sl-line flex"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-card">
+          <span class="tl-tag active">Em Progresso</span>
+          <div>
+            <div class="tl-title">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+            <div class="tl-sub">Faculdade &middot; 2023 &mdash; 2025</div>
+            <div class="tl-desc">Engenharia de software, desenvolvimento full-stack, modelagem de banco de dados e arquitetura de sistemas.</div>
+          </div>
+        </div>
+        <div class="timeline-card">
+          <span class="tl-tag done">Completo</span>
+          <div>
+            <div class="tl-title">Ensino Médio Completo</div>
+            <div class="tl-sub">Escola Estadual &middot; Concluído</div>
+            <div class="tl-desc">Base educacional focada em exatas e raciocínio lógico.</div>
+          </div>
+        </div>
+        <div class="timeline-card">
+          <span class="tl-tag done">Conquistado</span>
+          <div>
+            <div class="tl-title">Certificações e Cursos Livres</div>
+            <div class="tl-sub">Plataformas Online &middot; 2023 - Presente</div>
+            <div class="tl-desc">Fundamentos de Lógica, Algoritmos, Git, GitHub e linguagens modernas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Contato">
+    <div class="container">
+      <div class="contact-center">
+        <div class="section-label" style="justify-content: center;">
+          <span class="sl-num">04</span>
+          <div class="sl-line" style="width: 40px;"></div>
+          <span class="sl-text">Multiplayer / Contato</span>
+        </div>
+        <h2 class="contact-h2">Mandar Mensagem</h2>
+        <p class="contact-p">Pronto para novos desafios, projetos e conexões no setor de TI.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:anderxandi@hotmail.com">
+            <span class="icon">[MAIL]</span>
+            <div><div class="cl-label">Email Direct</div><div class="cl-val">anderxandi@hotmail.com</div></div>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/anderson-a-alexandre-495492355/" target="_blank" rel="noopener">
+            <span class="icon">[LINKEDIN]</span>
+            <div><div class="cl-label">Network Profile</div><div class="cl-val">anderson-a-alexandre</div></div>
+          </a>
+          <a class="contact-link" href="https://github.com/neoknif" target="_blank" rel="noopener">
+            <span class="icon">[GIT]</span>
+            <div><div class="cl-label">Code Repository</div><div class="cl-val">@neoknif</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 ANDERSON ALEXANDRE &middot; POWERED BY AZION</p>
+  </footer>
+
+  <!-- JS Externo -->
+  <script src="js/main.js"></script>
+</body>
+</html>
