@@ -23,6 +23,7 @@
       <div class="nav-links">
         <a href="#Sobre" class="active">SOBRE</a>
         <a href="#Habilidades">SKILLS</a>
+        <a href="#Projetos">PROJETOS</a>
         <a href="#Formacao">QUESTS</a>
         <a href="#Contato">CONTATO</a>
       </div>
@@ -67,12 +68,11 @@
       <div class="showcase-card">
         <div class="showcase-header">
           <span class="showcase-title">&gt; FEATURED MEDIA / PROJECT SHOWCASE</span>
-          <span class="showcase-badge">LIVE DEMO</span>
+          <span class="showcase-badge">PREVIEW</span>
         </div>
-        <div class="media-box">
-          <video autoplay loop muted playsinline>
-            <source src="https://i.imgur.com/eGB5sIe.mp4" type="video/mp4" />
-          </video>
+        
+        <div class="media-box" style="aspect-ratio: 16/9; border: none;">
+          <img src="img/demo.gif" alt="Preview do Sistema" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
         </div>
       </div>
 
@@ -91,10 +91,65 @@
     </div>
   </section>
 
-  <section id="Formacao">
+  <section id="Projetos">
     <div class="container">
       <div class="section-label">
         <span class="sl-num">03</span>
+        <div class="sl-line"></div>
+        <span class="sl-text">Save Files / Projetos</span>
+        <div class="sl-line flex"></div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Card AbsenceIQ -->
+        <div class="project-card">
+          <div class="project-img-box double-img">
+            <img src="img/absenceiq-mockup.png" alt="Mockup AbsenceIQ Login" class="img-front" />
+            <img src="img/absenceiq-mockup1.png" alt="Mockup AbsenceIQ Dashboard" class="img-back" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AbsenceIQ</h3>
+            <p class="project-desc">Sistema Full Stack para gestão de absenteísmo e atestados médicos. MVP funcional com infraestrutura na nuvem.</p>
+            <div class="project-techs">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Prisma</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <div class="btn-row">
+              <a href="https://absenceiq.up.railway.app" target="_blank" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
+              <a href="#" class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px; cursor: not-allowed; border-color: #64748b; color: #64748b;" title="Código Fonte Fechado (IP Comercial)">IP Protegida</a>
+            </div>
+          </div>
+        </div><!-- Fim do card AbsenceIQ corrigido -->
+
+        <!-- Card Projeto Vale -->
+        <div class="project-card">
+          <div class="project-img-box">
+            <img src="img/projeto-vale-mockup.png" alt="Mockup Projeto Vale" />
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Projeto Vale</h3>
+            <p class="project-desc">Plataforma web desenvolvida para uma ONG local focada em impacto social, acessibilidade e conteúdo multimídia.</p>
+            <div class="project-techs">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Vercel</span>
+            </div>
+            <div class="btn-row">
+              <a href="https://vale.neokf.com.br" target="_blank" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
+              <a href="https://github.com/neoknif/projeto-vale-v2" target="_blank" class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px;">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Formacao">
+    <div class="container">
+      <div class="section-label">
+        <span class="sl-num">04</span>
         <div class="sl-line"></div>
         <span class="sl-text">Main Quests / Formação</span>
         <div class="sl-line flex"></div>
@@ -132,7 +187,7 @@
     <div class="container">
       <div class="contact-center">
         <div class="section-label" style="justify-content: center;">
-          <span class="sl-num">04</span>
+          <span class="sl-num">05</span>
           <div class="sl-line" style="width: 40px;"></div>
           <span class="sl-text">Multiplayer / Contato</span>
         </div>
