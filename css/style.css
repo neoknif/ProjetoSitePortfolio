@@ -91,7 +91,7 @@ nav {
   color: var(--dim); 
   text-decoration: none; 
   border: 1px solid transparent; 
-  transition: all 0.3s; 
+  transition: color 0.3s, border-color 0.3s, background 0.3s, text-shadow 0.3s; 
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); 
 }
 
@@ -100,6 +100,29 @@ nav {
   border-color: var(--neon-blue); 
   background: rgba(0, 229, 255, 0.1); 
   text-shadow: 0 0 8px rgba(0, 229, 255, 0.6); 
+}
+
+/* Botão hambúrguer - escondido no desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  font-size: 20px;
+  line-height: 1;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+.btn-gamer:focus-visible,
+.contact-link:focus-visible,
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 3px;
 }
 
 section { 
@@ -205,7 +228,7 @@ section {
   letter-spacing: 2px; 
   text-decoration: none; 
   cursor: pointer; 
-  transition: all 0.3s; 
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s, color 0.3s; 
   position: relative; 
   clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px); 
   display: inline-block; 
@@ -356,11 +379,12 @@ section {
   background: #000; 
 }
 
-.media-box video { 
+.media-box video,
+.media-box img { 
   width: 100%; 
-  height: auto; 
+  height: 100%; 
   display: block; 
-  object-fit: contain; 
+  object-fit: cover; 
   image-rendering: -webkit-optimize-contrast; 
 }
 
@@ -406,7 +430,7 @@ section {
   padding: 20px 24px; 
   border: 1px solid var(--border); 
   background: var(--card); 
-  transition: all 0.3s; 
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; 
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); 
 }
 
@@ -474,7 +498,7 @@ section {
   grid-template-columns: 140px 1fr; 
   gap: 32px; 
   align-items: start; 
-  transition: all 0.3s; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
 .timeline-card:hover { 
@@ -564,7 +588,7 @@ section {
   background: var(--card); 
   text-decoration: none; 
   color: inherit; 
-  transition: all 0.3s; 
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; 
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); 
 }
 
@@ -614,12 +638,6 @@ footer p {
   50% { opacity: 0; } 
 }
 
-@media (max-width: 760px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .avatar-card { width: 100%; }
-  .timeline-card { grid-template-columns: 1fr; gap: 16px; }
-}
-
 /* --- SEÇÃO PROJETOS --- */
 .projects-grid {
   display: grid;
@@ -631,7 +649,7 @@ footer p {
   background: var(--card);
   border: 1px solid var(--border);
   clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
-  transition: all 0.4s;
+  transition: border-color 0.4s, box-shadow 0.4s, transform 0.4s;
   display: flex;
   flex-direction: column;
 }
@@ -642,7 +660,6 @@ footer p {
   transform: translateY(-5px);
 }
 
-/* --- CORREÇÃO DE TAMANHO DAS IMAGENS --- */
 .project-img-box {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -728,4 +745,40 @@ footer p {
   background: rgba(0, 255, 136, 0.1);
   padding: 4px 8px;
   border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .avatar-card { width: 100%; }
+  .timeline-card { grid-template-columns: 1fr; gap: 16px; }
+
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    clip-path: none;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
 }

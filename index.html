@@ -4,23 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anderson Alexandre - Gamer Portfolio</title>
-  
+
+  <!-- SEO -->
+  <meta name="description" content="Portfólio de Anderson Alexandre, desenvolvedor em transição de carreira para Análise e Desenvolvimento de Sistemas. Projetos full stack em React, Node.js e PostgreSQL." />
+  <link rel="canonical" href="https://neokf.com.br/" />
+
+  <!-- Favicon (substitua img/favicon.png pelo seu arquivo real) -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="Anderson Alexandre - Gamer Portfolio" />
+  <meta property="og:description" content="Desenvolvedor em transição de carreira, portfólio com projetos full stack em React, Node.js e PostgreSQL." />
+  <meta property="og:image" content="https://neokf.com.br/img/demo.gif" />
+  <meta property="og:url" content="https://neokf.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  
+
   <!-- CSS Externo -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <canvas id="matrix-canvas"></canvas>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
   <nav>
     <div class="nav-inner">
       <span class="nav-logo">&lt;NEOKNIF /&gt;</span>
-      <div class="nav-links">
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
         <a href="#Sobre" class="active">SOBRE</a>
         <a href="#Habilidades">SKILLS</a>
         <a href="#Projetos">PROJETOS</a>
@@ -42,7 +62,7 @@
           </div>
           <p class="hero-desc">
             <strong>36 anos</strong> &middot; Profissional do Setor Público em transição para o mundo Dev.
-            Atualmente elevando o nível (Leveling Up) em <strong>Análise e Desenvolvimento de Sistemas</strong>.
+            Minha curiosidade por jogos desde sempre foi o que me aproximou da tecnologia &mdash; hoje aplico essa mesma lógica na construção de sistemas web, cursando <strong>Análise e Desenvolvimento de Sistemas</strong>.
           </p>
           <div class="btn-row">
             <a href="#Contato" class="btn-gamer btn-primary-gamer">Iniciar Contato</a>
@@ -70,9 +90,17 @@
           <span class="showcase-title">&gt; FEATURED MEDIA / PROJECT SHOWCASE</span>
           <span class="showcase-badge">PREVIEW</span>
         </div>
-        
+
         <div class="media-box" style="aspect-ratio: 16/9; border: none;">
-          <img src="img/demo.gif" alt="Preview do Sistema" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+          <!--
+            Recomendado: troque o GIF por vídeo (mp4/webm) para reduzir peso.
+            Se ainda não tiver o vídeo, pode manter a tag <img> original comentada abaixo.
+          -->
+          <video autoplay muted loop playsinline poster="img/demo-poster.jpg" aria-label="Preview do sistema em funcionamento">
+            <source src="img/demo.mp4" type="video/mp4" />
+            <!-- fallback se o navegador não suportar vídeo -->
+            <img src="img/demo.gif" alt="Preview do Sistema" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+          </video>
         </div>
       </div>
 
@@ -104,8 +132,8 @@
         <!-- Card AbsenceIQ -->
         <div class="project-card">
           <div class="project-img-box double-img">
-            <img src="img/absenceiq-mockup.png" alt="Mockup AbsenceIQ Login" class="img-front" />
-            <img src="img/absenceiq-mockup1.png" alt="Mockup AbsenceIQ Dashboard" class="img-back" />
+            <img src="img/absenceiq-mockup.png" alt="Mockup AbsenceIQ Login" class="img-front" loading="lazy" />
+            <img src="img/absenceiq-mockup1.png" alt="Mockup AbsenceIQ Dashboard" class="img-back" loading="lazy" />
           </div>
           <div class="project-content">
             <h3 class="project-title">AbsenceIQ</h3>
@@ -117,16 +145,16 @@
               <span class="tech-tag">PostgreSQL</span>
             </div>
             <div class="btn-row">
-              <a href="https://absenceiq.up.railway.app" target="_blank" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
-              <a href="#" class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px; cursor: not-allowed; border-color: #64748b; color: #64748b;" title="Código Fonte Fechado (IP Comercial)">IP Protegida</a>
+              <a href="https://absenceiq.up.railway.app" target="_blank" rel="noopener" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
+              <span class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px; cursor: not-allowed; border-color: #64748b; color: #64748b;" title="Código Fonte Fechado (IP Comercial)" aria-disabled="true">IP Protegida</span>
             </div>
           </div>
-        </div><!-- Fim do card AbsenceIQ corrigido -->
+        </div><!-- Fim do card AbsenceIQ -->
 
         <!-- Card Projeto Vale -->
         <div class="project-card">
           <div class="project-img-box">
-            <img src="img/projeto-vale-mockup.png" alt="Mockup Projeto Vale" />
+            <img src="img/projeto-vale-mockup.png" alt="Mockup Projeto Vale" loading="lazy" />
           </div>
           <div class="project-content">
             <h3 class="project-title">Projeto Vale</h3>
@@ -137,8 +165,8 @@
               <span class="tech-tag">Vercel</span>
             </div>
             <div class="btn-row">
-              <a href="https://vale.neokf.com.br" target="_blank" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
-              <a href="https://github.com/neoknif/projeto-vale-v2" target="_blank" class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px;">GitHub</a>
+              <a href="https://vale.neokf.com.br" target="_blank" rel="noopener" class="btn-gamer btn-primary-gamer" style="padding: 10px 20px; font-size: 11px;">Live Demo</a>
+              <a href="https://github.com/neoknif/projeto-vale-v2" target="_blank" rel="noopener" class="btn-gamer btn-outline-gamer" style="padding: 10px 20px; font-size: 11px;">GitHub</a>
             </div>
           </div>
         </div>
@@ -215,7 +243,29 @@
     <p>&copy; 2026 ANDERSON ALEXANDRE &middot; POWERED BY AZION</p>
   </footer>
 
-  <!-- JS Externo -->
+  <!-- JS Externo (typewriter, matrix canvas, skill tree, etc.) -->
   <script src="js/main.js"></script>
+
+  <!-- Toggle do menu mobile (pode mover para dentro de main.js depois) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = navLinks.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
